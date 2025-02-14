@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐿𝒶𝓉𝒾𝒹𝑜𝓈 𝒹𝑒 𝒜𝓂𝑜r</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('fondo_pagina2.jpg') no-repeat center center/cover;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Simplicity', sans-serif;
+        }
+
+        .heart-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poem {
+            position: relative;
+            z-index: 2;
+            color: black; /* Cambié el color del texto a negro */
+            font-family: 'Parisienne', cursive; /* Cambié la fuente a Parisienne cursiva */
+            font-size: 18px;
+            padding: 15px;
+            background: transparent; /* Eliminé el fondo oscuro */
+            border-radius: 15px;
+            max-width: 90%;
+            margin-top: auto;
+            text-align: justify; /* Justifiqué el texto */
+        }
+
+        .btn {
+            background-color: #696969;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #D30000;
+            transform: scale(1.1);
+        }
+
+        /* Carrusel de imágenes y videos */
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img, .carousel video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <video src="video1.mp4" autoplay loop muted></video>
+            <img src="foto3.jpg" alt="Foto 3">
+            <video src="video2.mp4" autoplay loop muted></video>
+            <img src="foto4.jpg" alt="Foto 4">
+            <img src="foto5.jpg" alt="Foto 5">
+            <video src="video3.mp4" autoplay loop muted></video>
+            <img src="foto6.jpg" alt="Foto 6">
+            <video src="video4.mp4" autoplay loop muted></video>
+            <img src="foto7.jpg" alt="Foto 7">
+            <img src="foto8.jpg" alt="Foto 8">
+            <video src="video5.mp4" autoplay loop muted></video>
+            <img src="foto9.jpg" alt="Foto 9">
+            <video src="video6.mp4" autoplay loop muted></video>
+            <img src="foto10.jpg" alt="Foto 10">
+        </div>
+    </div>
+    <br>
+    <div class="poem">
+        <center>        <p>
+            Eres luz en mis días, mi dulce alegría,<br>
+            un suspiro que el viento a mi alma envía.
+            Tu risa es la música que quiero escuchar,<br>
+            tu abrazo, el refugio donde quiero estar.
+
+            Eres mi reina, mi amor más sincero,<br>
+            mi sueño despierto, mi todo, mi cielo.
+            Cada latido susurra tu nombre,<br>
+            porque sin ti, mi vida se esconde.
+
+            Eres mi niña, mi paz, mi locura,<br>
+            la estrella que brilla con luz más pura.
+            Hoy y siempre, mi amor es tuyo,<br>
+            porque en tu mirada mi mundo construyo.
+        </p>
+        </center>
+
+    </div>
+    <button class="btn" onclick="location.href='tercera_pagina.html';">𝒞𝑜𝓃𝓉𝒾𝓃𝓊𝒶𝓇𝒶</button>
+
+    <script>
+        let index = 0;
+        function moveCarousel() {
+            const carousel = document.getElementById('carousel');
+            const items = carousel.children.length;
+            index = (index + 1) % items;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+        setInterval(moveCarousel, 3000);
+    </script>
+</body>
+</html>

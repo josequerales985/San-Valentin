@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝒫𝒶𝓇𝒶 𝑀𝒾 𝑅𝑒𝒾𝓃𝒶</title>
+    <style>
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('tu-imagen.jpg') no-repeat center center/cover;
+            position: relative;
+            overflow: hidden;
+            font-family: 'darcing cript', cursive; /* Fuente cambiada a Parisienne cursiva */
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            position: relative;
+            color: white; /* Color del texto cambiado a blanco */
+            z-index: 2;
+            padding: 20px;
+        }
+        
+        .btn {
+            background-color: #696969;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #D30000;
+        }
+
+        /* Animaciones de Cupidos y Corazones */
+        .animation-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .heart, .cupid {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            animation: float 5s infinite ease-in-out;
+        }
+        .heart {
+            background-image: url('corazon.png');
+        }
+        .cupid {
+            background-image: url('cupid.png');
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Se eliminó la animación de los fuegos artificiales */
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>𝒫𝒶𝓇𝒶 𝓂𝒾 𝓅𝓇𝑒𝒸𝒾𝑜𝓈𝓊𝓇𝒶</h1>
+        <p>𝐻𝑜𝓎 𝓆𝓊𝒾𝑒𝓇𝑜 𝒶𝒷𝓇𝒾𝓇𝓉𝑒 𝓂𝒾 𝒸𝑜𝓇𝒶𝓏𝑜𝓃 𝓎 𝓇𝑒𝒸𝑜𝓇𝒹𝒶𝓇𝓉𝑒 𝓆𝓊𝑒 𝒸𝒶𝒹𝒶 𝓁𝒶𝓉𝒾𝒹𝑜 𝓁𝒶𝓉𝑒 𝓅𝑜𝓇 𝓉𝒾.</p>
+        <p>𝒹𝒾𝓈𝒻𝓇𝓊𝓉𝒶 𝒹𝑒 𝑒𝓈𝓉𝑒 𝓅𝑒𝓆𝓊𝑒𝓃𝑜 𝓇𝒾𝓃𝒸𝑜𝓃 𝓆𝓊𝑒 𝒽𝑒 𝒸𝓇𝑒𝒶𝒹𝑜 𝓅𝒶𝓇𝒶 𝓉𝒾, 𝒹𝑜𝓃𝒹𝑒 𝒸𝒶𝒹𝒶 𝓅𝒶𝓁𝒶𝒷𝓇𝒶 𝓈𝓊𝓈𝓊𝓇𝓇𝒶 𝓁𝑜 𝓂𝓊𝒸𝒽𝑜 𝓆𝓊𝑒 𝓉𝑒 𝒶𝓂𝑜.</p>
+        <button class="btn" onclick="location.href='segunda_pagina.html'">𝑅𝑒𝒸𝓊𝑒𝓇𝒹𝑜𝓈</button>
+    </div>
+
+    <script>
+        // Se eliminó la función de los fuegos artificiales
+    </script>
+</body>
+</html>
